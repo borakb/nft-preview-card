@@ -37,8 +37,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
     font-size: 18px;
+}
+
+body > main > .container {
+    margin-bottom: 1rem;
 }
 
 .pointer {
