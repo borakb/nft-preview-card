@@ -126,6 +126,7 @@ body {
 .container ul li {
     display: flex;
     align-items: center;
+    font-size: 0.9em;
     font-weight: 400;
     gap: 0.5em;
 }
