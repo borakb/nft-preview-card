@@ -57,6 +57,8 @@ body {
     border-radius: 0.8em;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 0 15px hsl(217, 54%, 11%),
+                0 0 15px 15px hsl(217, 54%, 11%);
     gap: 1em;
 }
 
@@ -135,6 +137,7 @@ body {
 
 .container ul li:first-child {
     color: var(--cyan);
+    font-weight: 600;
 }
 
 .container ul li:last-child {
