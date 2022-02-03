@@ -109,6 +109,7 @@ body {
 
 .title {
     color: var(--white);
+    width: fit-content;
     font-weight: 600;
     font-size: 1.3em;
 }
