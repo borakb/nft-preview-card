@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    font-family: "Outfit", "sans-serif";
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+:root {
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --white: hsl(0, 0%, 100%);
+    --line: hsl(215, 32%, 27%);
+    --white-transparent: hsl(0, 0%, 100%, 0.6);
+    --cyan: hsl(178, 100%, 50%);
+}
+
+.attribution { font-size: 11px; text-align: center; color: var(--white-transparent); }
+.attribution a { color: white; text-decoration: none; transition: color 0.4s ease; }
+.attribution a:hover { color: var(--cyan); text-decoration: underline;}
+
+img {
+    max-width: 100%;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 18px;
+}
+
+.pointer {
+    cursor: pointer;
+    transition: color 0.4s ease;
+}
+
+.pointer:hover {
+    color: var(--cyan);
+}
+
+.container {
+    background-color: var(--card-bg);
+    max-width: 340px;
+    padding: 25px;
+    border-radius: 0.8em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container > img {
+    backface-visibility: hidden;
+}
+
+.img-container > * {
+    border-radius: 0.4em;
+}
+
+.img-container img {
+    display: block;
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsl(178, 100%, 50%, 0);
+    transition: opacity 0.4s ease, background-color 0.4s ease;
+}
+
+.cover img {
+    opacity: 0;
+}
+
+.cover:hover {
+    background-color: hsl(178, 100%, 50%, 0.5);
+}
+
+.cover:hover img {
+    opacity: 1;
+}
+
+.cover img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.description {
+    color: var(--white-transparent);
+    font-weight: 300;
+}
+
+.container ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.8em;
+}
+
+.container ul li {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    gap: 0.5em;
+}
+
+.container ul li:first-child {
+    color: var(--cyan);
+}
+
+.container ul li:last-child {
+    color: var(--white-transparent);
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 0.9em;
+    color: var(--white-transparent);
+    gap: 0.8em
+}
+
+.author p span {
+    color: white;
+}
+
+.author img {
+    width: 2em;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
